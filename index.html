@@ -35,8 +35,21 @@
                     </div>
                 </div>
             </div>
-            <div class="add">
-                <h3>+ Tambah</h3>
+            <div class="add-books">
+                <form>
+                    <input id="judul" name="judul" placeholder="Masukkan judul buku" type="text" class="form-control" required="required">
+                    <input id="penulis" name="penulis" placeholder="Masukkan nama penulis" type="text" class="form-control" required="required">
+                    <input id="tahun" name="tahun" placeholder="Masukkan tahun terbit" type="text" class="form-control" required="required">
+                    <div class="checkbox">
+                        <input name="isComplete" id="isComplete" type="checkbox" class="custom-control-input" value="True">
+                        <label for="isComplete" class="custom-control-label">Sudah dibaca</label>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-4 col-8">
+                            <button name="submit" type="submit" class="btn btn-primary">+ Tambah</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 

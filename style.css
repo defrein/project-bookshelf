@@ -6,6 +6,7 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Open Sans', sans-serif;
+    outline: none;
 }
 
 body {
@@ -46,6 +47,7 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    margin-right: 5px;
 }
 
 #user .back-profile {
@@ -62,7 +64,7 @@ body {
 #user .profile {
     display: flex;
     flex-direction: row;
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 #user .profile .image-profile {
@@ -118,36 +120,78 @@ body {
     padding: 0 10px;
 }
 
-#user .add {
-    margin-top: 40px;
+#user .add-books {
+    width: 90%;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
-#user .add h3 {
-    width: 180px;
-    background: #3f8cf05d;
-    text-align: center;
-    font-size: 18px;
-    line-height: 18px;
-    padding: 7px 0;
-    margin: auto;
+#user .add-books form input {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 10px;
     display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.custom-control-input {
+    flex: 1;
+}
+
+.checkbox label {
+    flex: 4;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.btn-primary {
+    padding: 5px 0;
+    text-align: center;
+    width: 50%;
+    font-size: 14px;
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
+    background: #3f8cf05d;
+    border: none;
+    outline: none;
+    margin-left: 25%;
 }
 
 #main {
     flex: 2.2;
-    padding: 0 10px;
+    padding: 5 10px;
     display: flex;
     flex-direction: row;
 }
 
 #main .buku {
     flex: 1;
-    margin: 0 5px;
+    margin: 0 2px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -216,4 +260,8 @@ body {
 .buku .books .book .text {
     padding: 20px 0;
     text-align: center;
+}
+
+.buku .books .book .text p {
+    font-size: 14px;
 }
