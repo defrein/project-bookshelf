@@ -12,15 +12,11 @@
 body {
     width: 100%;
     height: 100vh;
-    /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/img/bg.jpg');
-    background-position: center;
-    background-size: cover;
-    position: relative; */
-    background: #0f0c29;
+    background: #000428;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: -webkit-linear-gradient(to left, #004e92, #000428);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to left, #004e92, #000428);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: rgb(200, 200, 200);
 }
@@ -32,16 +28,16 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: row;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
 }
 
 #user {
-    flex: 0.8;
+    flex-basis: 27%;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -50,7 +46,7 @@ body {
     margin-right: 5px;
 }
 
-#user .back-profile {
+#user .back-title {
     width: 100%;
     height: 100px;
     background: #3f8cf05d;
@@ -61,78 +57,42 @@ body {
     -o-border-radius: 10px 10px 0 0;
 }
 
-#user .profile {
-    display: flex;
-    flex-direction: row;
-    margin-top: -50px;
-}
-
-#user .profile .image-profile {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+#user .the-title {
+    margin: -60px auto 60px auto;
     display: block;
-    margin: 0 0 0 10px;
 }
 
-#user .profile .image-profile img {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    border-radius: 100px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
-}
-
-#user .profile h2 {
-    font-size: 22px;
-    font-weight: 400;
+#user .the-title h1 {
+    font-size: 30px;
+    line-height: 30px;
     text-align: center;
-}
-
-#user .profile .right-profile .data {
-    display: flex;
-    flex-direction: row;
-}
-
-#user .profile .right-profile .data .jumlah h1 {
-    font-size: 28px;
-    font-weight: 400;
-}
-
-#user .profile .right-profile .data .jumlah p {
-    font-size: 12px;
-}
-
-#user .profile .right-profile .data .jumlah {
-    flex: 1;
-    text-align: center;
-    padding: 0 10px;
 }
 
 #user .add-books {
     width: 90%;
-    margin: 40px auto;
+    margin: auto;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px 15px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+#user .add-books .title {
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+#user .add-books form {
+    margin: 20px auto;
+    padding: 30px 15px;
 }
 
 #user .add-books form input {
@@ -171,6 +131,7 @@ body {
     text-align: center;
     width: 50%;
     font-size: 14px;
+    color: #fff;
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
@@ -183,31 +144,33 @@ body {
 }
 
 #main {
-    flex: 2.2;
+    flex-basis: 72%;
     padding: 5 10px;
     display: flex;
     flex-direction: row;
 }
 
 #main .buku {
-    flex: 1;
-    margin: 0 2px;
+    flex-basis: 50%;
+    margin: 0 5px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    overflow-y: scroll;
 }
 
 .title {
     padding: 10px 0;
     width: 100%;
     margin-bottom: 10px;
-    border-radius: 10px 10px 0 0;
-    -webkit-border-radius: 10px 10px 0 0;
-    -moz-border-radius: 10px 10px 0 0;
-    -ms-border-radius: 10px 10px 0 0;
-    -o-border-radius: 10px 10px 0 0;
+    border-radius: 10 0 0 0;
+    -webkit-border-radius: 10 0 0 0;
+    -moz-border-radius: 10 0 0 0;
+    -ms-border-radius: 10 0 0 0;
+    -o-border-radius: 10 0 0 0;
+    background: #3f8cf05d;
 }
 
 .title h3 {
@@ -220,11 +183,32 @@ body {
 .buku .books {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    background: #004d90;
+    width: 10px;
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00123c;
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
 }
 
 .buku .books .book {
-    flex: 1;
-    margin: 10px 5px;
+    flex-basis: 45%;
+    margin: 5px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -239,8 +223,23 @@ body {
 .buku .books .book .buttons {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-around;
     padding: 5px 0;
+}
+
+.buku .title {}
+
+.buku .books .book .buttons div {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 3.5px 7.5px;
+    position: relative;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 .belum-dibaca .books .book .buttons,
@@ -253,10 +252,6 @@ body {
     background: #2af06f56;
 }
 
-.buku .books .book .buttons div {
-    margin-right: 15px;
-}
-
 .buku .books .book .text {
     padding: 20px 0;
     text-align: center;
@@ -264,4 +259,51 @@ body {
 
 .buku .books .book .text p {
     font-size: 14px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        min-height: 130vh;
+    }
+    .container {
+        min-height: 130vh;
+        width: 90%;
+        height: auto;
+        position: relative;
+        flex-direction: column;
+    }
+    #user {
+        flex-basis: 100%;
+        margin: 0;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    #user .back-title {
+        height: 80px;
+    }
+    #user .the-title {
+        margin: -50px auto 30px auto;
+    }
+    #user .the-title h1 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    #user .add-books {
+        margin-top: 60px;
+    }
+    #user .add-books form {
+        margin: 10px auto;
+        padding: 20px 30px;
+    }
+    #main {
+        flex-basis: 100%;
+        flex-direction: column;
+    }
+    #main .belum-dibaca,
+    #main .sudah-dibaca {
+        max-height: 220px;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+    }
 }

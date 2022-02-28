@@ -5,48 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookshelf</title>
+    <title>Bookshelf Apps</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div id="user">
-            <div class="back-profile"></div>
-            <div class="profile">
-                <div class="image-profile">
-                    <img src="assets/img/es-profile.jpg" alt="">
-                </div>
-                <div class="right-profile">
-                    <h2>Wahni Adnani</h2>
-                    <div class="data">
-                        <div class="jumlah buku">
-                            <h1>0</h1>
-                            <p>Buku</p>
-                        </div>
-                        <div class="jumlah belum">
-                            <h1>0</h1>
-                            <p>Belum Dibaca</p>
-                        </div>
-                        <div class="jumlah sudah">
-                            <h1>0</h1>
-                            <p>Sudah Dibaca</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="back-title"></div>
+            <div class="the-title">
+                <h1>Bookshelf Apps</h1>
             </div>
-            <div class="add-books">
+            <div class="add-books" id="inputBook">
+                <div class="title">
+                    <h3>Tambah Buku</h3>
+                </div>
                 <form>
-                    <input id="judul" name="judul" placeholder="Masukkan judul buku" type="text" class="form-control" required="required">
-                    <input id="penulis" name="penulis" placeholder="Masukkan nama penulis" type="text" class="form-control" required="required">
-                    <input id="tahun" name="tahun" placeholder="Masukkan tahun terbit" type="text" class="form-control" required="required">
+                    <input id="inputTitle" name="inputTitle" placeholder="Masukkan judul buku" type="text" class="form-control" required="required">
+                    <input id="inputAuthor" name="inputAuthor" placeholder="Masukkan nama penulis" type="text" class="form-control" required="required">
+                    <input id="inputYear" name="inputYear" placeholder="Masukkan tahun terbit" type="number" class="form-control" required="required">
                     <div class="checkbox">
-                        <input name="isComplete" id="isComplete" type="checkbox" class="custom-control-input" value="True">
-                        <label for="isComplete" class="custom-control-label">Sudah dibaca</label>
+                        <input name="inputIsComplete" id="inputIsComplete" type="checkbox" class="custom-control-input" value="True">
+                        <label for="inputIsComplete" class="custom-control-label">Sudah dibaca</label>
                     </div>
                     <div class="form-group row">
                         <div class="offset-4 col-8">
-                            <button name="submit" type="submit" class="btn btn-primary">+ Tambah</button>
+                            <button name="submit" type="submit" id="btn-submit" class="btn btn-primary">+ Tambah</button>
                         </div>
                     </div>
                 </form>
@@ -58,78 +42,23 @@
                 <div class="title">
                     <h3>Belum Dibaca</h3>
                 </div>
-                <div class="books">
-                    <div class="book">
-                        <div class="buttons">
-                            <div class="move-to-sudah">
-                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="delete">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <p>Judul</p>
-                            <p>Penulis</p>
-                            <p>Tahun Terbit</p>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="buttons">
-                            <div class="move-to-sudah">
-                                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="delete">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <p>Judul</p>
-                            <p>Penulis</p>
-                            <p>Tahun Terbit</p>
-                        </div>
-                    </div>
+                <div class="books" id="incompleteBookList">
                 </div>
             </div>
+
             <div class="buku sudah-dibaca">
                 <div class="title">
                     <h3>Sudah Dibaca</h3>
                 </div>
-                <div class="books">
-                    <div class="book">
-                        <div class="buttons">
-                            <div class="move-to-belum">
-                                <i class="fa fa-rotate-left"></i>
-                            </div>
-                            <div class="delete">
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <p>Judul</p>
-                            <p>Penulis</p>
-                            <p>Tahun Terbit</p>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <div class="buttons">
-                            <div class="move-to-belum">
-                                <i class="fa fa-rotate-left"></i>
-                            </div>
-                            <div class="delete">
-                                <i class="fa fa-trash-o"></i>
-                            </div>
-                        </div>
-                        <div class="text">
-                            <p>Judul</p>
-                            <p>Penulis</p>
-                            <p>Tahun Terbit</p>
-                        </div>
-                    </div>
+                <div class="books" id="completeBookList">
                 </div>
             </div>
         </div>
     </div>
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/dom.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/storage.js"></script>
     <!-- FONTAWESOME ICONS -->
     <script src="https://kit.fontawesome.com/7009cf2d19.js " crossorigin="anonymous "></script>
 </body>
